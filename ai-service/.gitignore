@@ -1,0 +1,9 @@
+node_modules/
+ai-service/node_modules/
+
+# Ignore npm error logs
+npm-debug.log*
+yarn-error.log*
+
+# Ignore the file containing environment variables (Security)
+.env
