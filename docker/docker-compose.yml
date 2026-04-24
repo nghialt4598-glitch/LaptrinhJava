@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ../backend
+      dockerfile: ../docker/backend.Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+      - ai-service
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: ../docker/frontend.Dockerfile
+    ports:
+      - "3000:3000"
+
+  ai-service:
+    build:
+      context: ../ai-service
+      dockerfile: ../docker/ai-service.Dockerfile
+    ports:
+      - "5000:5000"
+
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: planbookai
+    ports:
+      - "3306:3306"
