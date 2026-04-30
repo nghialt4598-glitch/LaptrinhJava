@@ -1,23 +1,28 @@
-import express from "express";
+require("dotenv").config();
+
+const express = require("express");
+const cors = require("cors");
+
+const aiRoutes = require("./routes/aiRoutes");
+const ocrRoutes = require("./routes/ocrRoutes");
 
 const app = express();
 
+app.use(cors());
+app.use(express.json());
+
+// ROOT TEST
 app.get("/", (req, res) => {
-  res.send("AI Service OK 🚀");
+    res.send("AI Service Running 🚀");
 });
 
-app.get("/api/ai/test", (req, res) => {
-  res.json({ message: "AI API OK 🚀" });
-});
+// ROUTES
+app.use("/api/ai", aiRoutes);
+app.use("/api/ocr", ocrRoutes);
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
+const PORT = process.env.PORT || 5000;
 
-app.get("/", (req, res) => {
-  res.send("AI Service Root OK 🚀");
-});
-
-app.get("/", (req, res) => {
-  res.send("AI Service Root OK 🚀");
+app.listen(PORT, () => {
+    console.log("🔥 SERVER STARTED");
+    console.log(`👉 http://localhost:${PORT}`);
 });

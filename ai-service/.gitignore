@@ -1,9 +1,42 @@
+# ======================
+# Node modules
+# ======================
 node_modules/
 ai-service/node_modules/
 
-# Ignore npm error logs
+# ======================
+# Logs
+# ======================
 npm-debug.log*
 yarn-error.log*
 
-# Ignore the file containing environment variables (Security)
+# ======================
+# Environment variables
+# ======================
 .env
+
+# ======================
+# OCR data 
+# ======================
+*.traineddata
+
+# ======================
+# IDE / Editor
+# ======================
+.vscode/
+
+# ======================
+# OS files
+# ======================
+.DS_Store
+
+# ======================
+# Build folders
+# ======================
+dist/
+build/
+
+# ======================
+# Postman (local only)
+# ======================
+.postman/
