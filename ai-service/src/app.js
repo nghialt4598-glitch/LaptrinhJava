@@ -16,6 +16,13 @@ app.get("/", (req, res) => {
     res.send("AI Service Running 🚀");
 });
 
+// Health check endpoint
+app.get("/health", (req, res) => {
+    res.json({
+        status: "OK",
+        service: "AI Service"
+    });
+});
 // ROUTES
 app.use("/api/ai", aiRoutes);
 app.use("/api/ocr", ocrRoutes);

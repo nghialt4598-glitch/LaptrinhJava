@@ -1,8 +1,6 @@
 ## Run
 npm install
-npm start
-
-## API
+npm run dev
 
 ### AI
 POST /api/ai/ask
