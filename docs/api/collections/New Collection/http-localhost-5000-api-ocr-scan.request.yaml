@@ -1,16 +1,12 @@
 $kind: http-request
-name: http://localhost:5000/api/ocr/scan
-url: http://localhost:5000/api/ocr/scan?=
+name: POST OCR Scan
+url: http://localhost:5000/api/ocr/scan
 method: POST
-queryParams:
-  "": ""
 body:
   type: formdata
   content:
     - type: file
       key: image
-      src:
-        - /C:/Users/ASUS/Pictures/Screenshots/Screenshot 2026-05-01 014019.png
-      description: ""
+      src: /C:/Users/ASUS/Downloads/tải xuống.png
       disabled: false
 order: 1777561613888
