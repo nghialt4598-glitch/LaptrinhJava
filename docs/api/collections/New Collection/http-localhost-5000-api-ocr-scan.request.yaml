@@ -1,0 +1,12 @@
+$kind: http-request
+name: POST OCR Scan
+url: http://localhost:5000/api/ocr/scan
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: image
+      src: /C:/Users/ASUS/Downloads/tải xuống.png
+      disabled: false
+order: 1777561613888
