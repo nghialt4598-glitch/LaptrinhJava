@@ -1,0 +1,11 @@
+$kind: http-request
+name: POST AI Ask
+url: http://localhost:5000/api/ai/ask
+method: POST
+body:
+  type: json
+  raw: |-
+    {
+      "prompt": "Chào AI, bạn giúp tôi làm toán nhé!"
+    }
+order: 1777561613889
